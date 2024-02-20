@@ -9,7 +9,7 @@ public class PaymentApp {
         System.out.println("Quantity is " + gcash.getQuantity());
 
         System.out.println("\nPayment order details if " + gcash.getClass().getSimpleName());
-        System.out.println("Discount rate is " + gcash.getMode().discRate());
+        System.out.println("Discount rate is " + gcash.getApp().determineDiscountRate());
         System.out.println("Payment amount is " + gcash.getTotalAmount());
 
         //using Maya
@@ -20,13 +20,13 @@ public class PaymentApp {
         maya.setMode(new Maya());
 
         System.out.println("\nPayment order details if " + maya.getClass().getSimpleName());
-        System.out.println("Discount rate is " + maya.getMode().discRate());
+        System.out.println("Discount rate is " + maya.getApp().determineDiscountRate());
         maya.setTotalAmount();
         System.out.println("Payment amount is " + maya.getTotalAmount());
 
         Order ShopeePay = new ShopeePay("keyboard", 300.0, 10, new ShopeePay());
         System.out.println("\nPayment order details if " + ShopeePay.getClass().getSimpleName());
-        System.out.println("Discount rate is " + ShopeePay.getMode().discRate());
+        System.out.println("Discount rate is " + ShopeePay.getApp().determineDiscountRate());
         System.out.println("Payment amount is " + ShopeePay.getTotalAmount());
 
 

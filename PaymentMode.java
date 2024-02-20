@@ -1,4 +1,4 @@
 public interface PaymentMode {
 
-    public double discRate();
+    public double determineDiscountRate();
 }

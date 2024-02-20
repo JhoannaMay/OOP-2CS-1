@@ -5,18 +5,18 @@ public class Order {
     private int quantity;
     private double unitPrice;
     private double totalAmount;
-    private PaymentMode mode; //interface
+    private PaymentMode app; //interface
 
     //default constructor
     public Order(){
     }
 
     //constructor
-    public Order(String item, double unitPrice, int quantity, PaymentMode mode) {
+    public Order(String item, double unitPrice, int quantity, PaymentMode app) {
         this.item = item;
         this.quantity = quantity;
         this.unitPrice = unitPrice;
-        this.mode = mode;
+        this.app = app;
         this.totalAmount = totalAmount();
     }
 
@@ -30,8 +30,8 @@ public class Order {
     public void setQuantity(int quantity) {
         this.quantity = quantity;
     }
-    public void setMode(PaymentMode mode) {
-        this.mode = mode;
+    public void setMode(PaymentMode app) {
+        this.app = app;
     }
     public void setTotalAmount() {
         this.totalAmount = totalAmount();
@@ -47,8 +47,8 @@ public class Order {
     public int getQuantity() {
         return quantity;
     }
-    public PaymentMode getMode() {
-        return mode;
+    public PaymentMode getApp() {
+        return app;
     }
     public double getTotalAmount() {
         return totalAmount;
@@ -56,7 +56,7 @@ public class Order {
 
     //method to calculate the total amount
     public double totalAmount(){
-        double disc = this.unitPrice*this.mode.discRate();
+        double disc = this.unitPrice*this.app.determineDiscountRate();
         double amount = this.unitPrice - disc;
         double total = amount*this.quantity;
         return total;

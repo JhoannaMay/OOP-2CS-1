@@ -1,6 +1,6 @@
 public class Maya extends Order implements PaymentMode {
     @Override
-    public double discRate() {
+    public double determineDiscountRate() {
         return 0.05;
     }
 }
