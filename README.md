@@ -1,6 +1,6 @@
-# OOP-CS-1
+# OOP-2CS-1
 
-#Lab Assignment 3
+# 💻Lab Assignment 3
 Develop a payment application that allows users to place orders for items, define the quantity, unit price, and choose a payment menthod ( Gcassh, Maya, ShopeePay). The application should calculate the total amount based on the order details and any appicable dsicounts offered by the chosen payment method, storing the result in the totalAmount attribute of the Order class, Specific requirements: 
 
 + PaymentApp class: This class serves as the entry point for the application. It demonstrates how to create an Order object, set its properties (item, quantity, unit price, and payment method), and calculate the total amount based on the chosen payment method.
