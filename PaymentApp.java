@@ -1,8 +1,5 @@
 public class PaymentApp {
 
-    /**
-     * @param args
-     */
     public static void main(String[] args){
 
         //using GCash payment
@@ -27,15 +24,9 @@ public class PaymentApp {
         maya.setTotalAmount();
         System.out.println("Payment amount is " + maya.getTotalAmount());
 
-        Order ShopeePay = new ShopeePay();
-        maya.setItem("keyboard");
-        maya.setUnitPrice(300.0);
-        maya.setQuantity(10);
-        maya.setMode(new ShopeePay());
-
+        Order ShopeePay = new ShopeePay("keyboard", 300.0, 10, new ShopeePay());
         System.out.println("\nPayment order details if " + ShopeePay.getClass().getSimpleName());
         System.out.println("Discount rate is " + ShopeePay.getMode().discRate());
-        ShopeePay.setTotalAmount();
         System.out.println("Payment amount is " + ShopeePay.getTotalAmount());
 
 
